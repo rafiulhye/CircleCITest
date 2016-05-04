@@ -1,10 +1,6 @@
 machine:
   java:
     version: openjdk7
-
-dependencies:
-  pre:
-    - sudo rsync -r --include=*/ --include=*.jar --exclude=* .jdk-overlay/jre $JAVA_HOME
 test:
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
